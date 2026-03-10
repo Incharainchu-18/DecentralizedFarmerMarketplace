@@ -1,0 +1,1428 @@
+/* Products.css - Enhanced Version */
+/* Add these to your existing Products.css */
+
+.products-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-content h1 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.header-content p {
+  color: #6b7280;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.connect-wallet-btn,
+.add-product-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.connect-wallet-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.connect-wallet-btn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.add-product-btn {
+  background: #10b981;
+  color: white;
+}
+
+.add-product-btn:hover:not(:disabled) {
+  background: #059669;
+}
+
+.add-product-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.wallet-connected {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.wallet-address {
+  background: #f3f4f6;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+.network-badge {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.products-page {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.products-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.products-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-left: 4px solid #28a745;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.stat-content h3 {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 5px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Search and Filter */
+.search-filter-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7f8c8d;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px 12px 45px;
+  border: 2px solid #e9ecef;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #28a745;
+}
+
+.category-filter {
+  padding: 12px 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 25px;
+  font-size: 1rem;
+  background: white;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+/* Products.css - Add these styles */
+
+/* Modal Styles */
+.add-product-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* Form Styles */
+.product-form {
+  padding: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cancel-btn {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  background: #f9fafb;
+}
+
+.submit-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: #10b981;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #059669;
+}
+
+.submit-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Wallet Prompt */
+.wallet-prompt {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fef3cd;
+  border: 1px solid #fcd34d;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.wallet-prompt span {
+  color: #92400e;
+  font-size: 0.875rem;
+  flex: 1;
+}
+
+.connect-btn {
+  padding: 0.5rem 1rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.connect-btn:hover {
+  background: #2563eb;
+}
+
+/* Blockchain Verification Styles */
+.blockchain-verification-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+}
+
+.verification-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.verification-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.verification-header h1 {
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.verification-header p {
+  color: #6b7280;
+}
+
+.wallet-info {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Add these responsive styles */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-content {
+    margin: 1rem;
+    max-height: calc(100vh - 2rem);
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions button {
+    width: 100%;
+  }
+}
+.add-product-btn {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.add-product-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+}
+
+.add-product-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image Section */
+.product-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.organic-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #28a745;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.blockchain-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.blockchain-badge.verified {
+  background: #28a745;
+}
+
+.blockchain-badge.pending {
+  background: #ffc107;
+  color: #212529;
+}
+
+.product-actions {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .product-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.action-btn {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.view-btn { background: rgba(52, 152, 219, 0.9); }
+.edit-btn { background: rgba(243, 156, 18, 0.9); }
+.delete-btn { background: rgba(231, 76, 60, 0.9); }
+
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Product Information Section - FIXED */
+.product-info {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.product-description {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+.farmer-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.product-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.batch-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  background: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.batch-label {
+  color: #7f8c8d;
+  font-weight: 600;
+}
+
+.batch-number {
+  color: #2c3e50;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.reviews-count {
+  color: #7f8c8d;
+  font-size: 0.85rem;
+}
+
+/* Product Details Section */
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 15px 0;
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.price-section {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.product-unit {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.quantity-section {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.quantity-label {
+  color: #7f8c8d;
+}
+
+.quantity-value {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Blockchain Info */
+.blockchain-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #7f8c8d;
+  background: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.tx-hash {
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.block-date {
+  font-weight: 600;
+}
+
+/* Product Actions Bottom */
+.product-actions-bottom {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.add-to-cart-btn, .view-details-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+.add-to-cart-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.view-details-btn {
+  background: #f8f9fa;
+  color: #2c3e50;
+  border: 2px solid #e9ecef;
+}
+
+.view-details-btn:hover {
+  background: #e9ecef;
+  border-color: #bdc3c7;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+}
+
+.empty-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 20px;
+}
+
+.empty-state h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #7f8c8d;
+  margin-bottom: 25px;
+}
+
+.add-first-product-btn {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.add-first-product-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(40, 167, 69, 0.3);
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.action-btn-primary, .action-btn-secondary {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.action-btn-primary {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+.action-btn-secondary {
+  background: white;
+  color: #2c3e50;
+  border: 2px solid #e9ecef;
+}
+
+.action-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(40, 167, 69, 0.3);
+}
+
+.action-btn-secondary:hover {
+  background: #f8f9fa;
+  border-color: #bdc3c7;
+  transform: translateY(-2px);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #7f8c8d;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #f8f9fa;
+  color: #e74c3c;
+}
+
+/* Form Styles */
+.product-form {
+  padding: 30px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #28a745;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Image Upload */
+.image-upload {
+  position: relative;
+  border: 2px dashed #bdc3c7;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  background: #f8f9fa;
+}
+
+.image-upload:hover {
+  border-color: #28a745;
+  background: #f1f8e9;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-icon {
+  margin: 0 auto 10px;
+  color: #7f8c8d;
+}
+
+.image-preview {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.cancel-btn, .submit-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.cancel-btn {
+  background: #f8f9fa;
+  color: #7f8c8d;
+  border: 2px solid #e9ecef;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  background: #e9ecef;
+  color: #e74c3c;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+}
+
+.cancel-btn:disabled,
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Blockchain Verification Styles */
+.blockchain-verification-page {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.verification-container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.verification-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.verification-header h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.verification-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .products-page {
+    padding: 15px;
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .search-filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-box {
+    min-width: auto;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-details {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .product-actions-bottom {
+    flex-direction: column;
+  }
+  
+  .quick-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-header h1 {
+    font-size: 2rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-content {
+    margin: 10px;
+    border-radius: 15px;
+  }
+  
+  .product-form {
+    padding: 20px;
+  }
+}
+/* Blockchain Specific Styles */
+.wallet-section {
+  display: flex;
+  align-items: center;
+}
+
+.connected-wallet {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wallet-badge {
+  background: linear-gradient(135deg, #8247e5, #6b34d8);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.connect-wallet-btn-header {
+  background: linear-gradient(135deg, #8247e5, #6b34d8);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-btn-header:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(130, 71, 229, 0.3);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.blockchain-icon {
+  background: linear-gradient(135deg, #8247e5, #6b34d8) !important;
+}
+
+.polygon-logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.stat-network {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #8247e5;
+  margin: 0;
+}
+
+/* Transaction Hash Styles */
+.transaction-hash-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.explorer-btn {
+  background: #8247e5;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explorer-btn:hover {
+  background: #6b34d8;
+}
+
+.explorer-btn-small {
+  background: #8247e5;
+  color: white;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blockchain-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Wallet Connect Prompt */
+.wallet-connect-prompt {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.wallet-connect-prompt svg {
+  color: #856404;
+}
+
+.connect-wallet-btn {
+  background: #8247e5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Success Actions */
+.success-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.explorer-btn-large {
+  background: #8247e5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-explorer-btn {
+  background: #8247e5;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/* Wallet Alert in Modal */
+.wallet-alert {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 30px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.wallet-alert svg {
+  color: #856404;
+  flex-shrink: 0;
+}
+
+.connect-in-modal-btn {
+  background: #8247e5;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Blockchain Notice */
+.blockchain-notice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #e8f5e8;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  font-size: 0.9rem;
+  color: #2d5016;
+}
+
+.blockchain-notice svg {
+  color: #28a745;
+}
+
+/* Wallet Info in Verification */
+.wallet-info {
+  background: #e8f5e8;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  display: inline-block;
+}
+.get-matic-btn {
+  background: #8247e5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.get-matic-btn:hover {
+  background: #6b34d8;
+}
+
+.wallet-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: #e8f5e8;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
