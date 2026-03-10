@@ -1,0 +1,186 @@
+/* === Global/resets & variables === */
+:root {
+  --brand-green: #2e7d32;
+  --brand-dark: #1b5e20;
+  --card-bg: #ffffff;
+  --card-border: rgba(0,0,0,0.06);
+  --input-bg: #ffffff;
+  --input-border: #dfeee0;
+  --muted: #666;
+}
+
+/* ensure base font and full-height layout */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #111;
+  background-color: #f8fafb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* keep app background (image applied inline in App.jsx) readable */
+.app-bg {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* remove heavy overlay and keep subtle spacing */
+.bg-overlay {
+  background: transparent;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+.navbar-brand {
+  color: var(--brand-green) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Main container — center content and limit width */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* AUTH CARD (login / register) */
+.login-card, .auth-card, .register-card {
+  width: 100%;
+  max-width: 460px;      /* fixed readable width */
+  margin: 40px auto;     /* center on page, with top spacing */
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 8px 22px rgba(18, 52, 32, 0.08);
+  color: #0b2a1a;
+}
+
+/* fallback if markup uses .container > .card etc. */
+.container > .card, .container > .auth-card {
+  margin: 40px auto;
+  max-width: 460px;
+}
+
+/* heading */
+.login-card h2, .auth-card h2 {
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: 1.8rem;
+  color: var(--brand-green);
+  font-weight: 700;
+}
+
+/* Logo block above card */
+.auth-logo {
+  width: 110px;
+  height: 110px;
+  margin: -70px auto 12px;  /* pull up above the card */
+  border-radius: 8px;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+.auth-logo img { max-width: 80%; max-height: 80%; display:block; }
+
+/* Form layout and inputs */
+.form, form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Explicit readable inputs */
+input.form-control, select.form-control, textarea.form-control,
+.input-control {
+  background: var(--input-bg) !important;
+  border: 1px solid var(--input-border) !important;
+  color: #222 !important;
+  padding: 12px 14px !important;
+  font-size: 15px !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* focus state */
+input.form-control:focus, select.form-control:focus, textarea.form-control:focus {
+  border-color: var(--brand-green) !important;
+  box-shadow: 0 4px 12px rgba(46,125,50,0.12) !important;
+}
+
+/* placeholder */
+::placeholder { color: #9aa39a; opacity: 1; }
+
+/* Primary button */
+.btn-primary, .login-btn, .form button[type="submit"] {
+  background: var(--brand-green) !important;
+  border-color: rgba(0,0,0,0.06) !important;
+  color: #fff !important;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  width: 100%;
+  box-shadow: 0 8px 18px rgba(31,138,62,0.16);
+  cursor: pointer;
+}
+
+/* Secondary small links */
+.small-link, .auth-links {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* minor utility */
+.text-center { text-align: center; }
+.mt-2 { margin-top: .5rem; }
+.mb-2 { margin-bottom: .5rem; }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgba(0,0,0,0.03);
+  background: rgba(255,255,255,0.6);
+  padding: 14px 0;
+}
+
+/* DASHBOARD (kept and slightly tuned) */
+.dashboard {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 26px;
+  border-radius: 12px;
+  background: #f1f8e9;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.dashboard h2 { text-align: center; color: #33691e; }
+.dashboard p { font-size: 18px; text-align: center; margin-top: 20px; }
+
+/* Products */
+.farmer-products { margin-top: 20px; padding: 14px; border-radius: 10px; background:#dcedc8; }
+.farmer-products h3 { color: #33691e; margin-bottom: 10px; }
+
+/* ensure floating assistant doesn't cover important UI */
+.floating-assistant { z-index: 999; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-card, .auth-card { margin: 20px 12px; padding: 18px; max-width: 96%; }
+  .auth-logo { width: 90px; height: 90px; margin-top: -50px; }
+  .navbar-brand { font-size: 1.25rem; }
+}

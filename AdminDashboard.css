@@ -1,180 +1,105 @@
-/* src/pages/AdminDashboard.css */
+/* =========================
+   GREEN THEME ENHANCEMENTS
+========================= */
+
+/* Subtle green background */
 .admin-dashboard {
-  min-height: 100vh;
-  background: #f8f9fa;
+  background: #f1f8f4;
+}
+
+/* Header stronger presence */
+.admin-header {
+  background: linear-gradient(90deg, #1B5E20, #2E7D32);
+}
+
+.brand h1,
+.admin-info span {
+  color: #ffffff;
+}
+
+.brand i {
+  color: #C8E6C9;
+}
+
+/* Sidebar active highlight */
+.nav-link.active {
+  background: rgba(46, 125, 50, 0.15);
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+/* Replace blue VIEW button with green */
+.btn-view {
+  background: rgba(76, 175, 80, 0.15);
+  color: var(--primary-dark);
+}
+
+.btn-view:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* Product cards – stronger border */
+.product-card {
+  border: 1px solid rgba(46, 125, 50, 0.15);
+}
+
+/* Approve button more dominant */
+.btn-approve {
+  background: var(--primary-light);
+  color: #ffffff;
+}
+
+.btn-approve:hover {
+  background: var(--primary-dark);
+}
+
+/* Reject stays red (important for admin clarity) */
+.btn-reject {
+  background: rgba(244, 67, 54, 0.15);
+}
+
+/* Status badges improved */
+.status-approved {
+  background: rgba(46, 125, 50, 0.2);
+  color: var(--primary-dark);
+}
+
+.status-pending {
+  background: rgba(255, 193, 7, 0.25);
+}
+
+.status-rejected {
+  background: rgba(244, 67, 54, 0.25);
+}
+
+/* Cards feel more premium */
+.stat-card {
+  border-left: 5px solid var(--primary);
+}
+
+/* Blockchain logs green tone */
+.log-hash {
+  color: var(--primary-dark);
+}
+
+/* Admin logout button */
+.btn-logout {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.btn-logout:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.sidebar {
+  z-index: 999;
 }
 
 .admin-header {
-  background: white;
-  border-bottom: 1px solid #dee2e6;
-  padding: 20px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
-.admin-header h1 {
-  color: #2c5530;
-  margin: 0;
-  font-size: 24px;
-}
-
-.admin-subtitle {
-  color: #6c757d;
-  margin: 0;
-  font-size: 14px;
-}
-
-.admin-info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.admin-email {
-  font-weight: 500;
-  color: #333;
-}
-
-.admin-nav {
-  background: white;
-  border-bottom: 1px solid #dee2e6;
-  padding: 0;
-}
-
-.nav-scroll {
-  display: flex;
-  overflow-x: auto;
-  padding: 0;
-}
-
-.nav-tab {
-  background: none;
-  border: none;
-  padding: 15px 20px;
-  border-bottom: 3px solid transparent;
-  color: #6c757d;
-  font-weight: 500;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-}
-
-.nav-tab:hover {
-  color: #28a745;
-  background: #f8f9fa;
-}
-
-.nav-tab.active {
-  color: #28a745;
-  border-bottom-color: #28a745;
-  background: #f8fff9;
-}
-
-.admin-main {
-  padding: 30px 0;
-}
-
-/* Stat Cards */
-.stat-card {
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  transition: transform 0.3s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-2px);
-}
-
-.stat-icon {
-  font-size: 2rem;
-}
-
-.stat-info h3 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-}
-
-.stat-info p {
-  margin: 0;
-  color: #6c757d;
-  font-size: 14px;
-}
-
-/* Activity List */
-.activity-list {
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-.activity-item {
-  display: flex;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #f1f1f1;
-  gap: 15px;
-}
-
-.activity-item:last-child {
-  border-bottom: none;
-}
-
-.activity-icon {
-  font-size: 1.2rem;
-  width: 30px;
-  text-align: center;
-}
-
-.activity-content {
-  flex: 1;
-}
-
-.activity-content strong {
-  display: block;
-  color: #333;
-  margin-bottom: 2px;
-}
-
-.activity-content span {
-  color: #6c757d;
-  font-size: 14px;
-}
-
-.activity-time {
-  color: #999;
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-/* Cards */
-.card {
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-}
-
-.card-header {
-  background: white;
-  border-bottom: 1px solid #dee2e6;
-  padding: 15px 20px;
-}
-
-.card-header h5 {
-  margin: 0;
-  color: #333;
-}
-
-.card-body {
-  padding: 20px;
-}
-
-/* Quick Actions */
-.quick-actions .btn {
-  text-align: left;
-  padding: 12px 15px;
+.nav-link {
+  cursor: pointer;
 }
